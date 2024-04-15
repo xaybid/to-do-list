@@ -13,7 +13,6 @@ This is a simple To-Do application built with ReactJS and Redux. It allows users
 - ReactJS: Frontend framework for building user interfaces.
 - Redux: State management library for managing application state.
 - React-Bootstrap: UI library for styling components.
-- Local Storage: Persistent storage for saving tasks so they are not lost on page reload.
 
 ## Installation
 
