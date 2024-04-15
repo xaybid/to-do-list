@@ -1,0 +1,141 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2a2a2a; /* Darkened background */
+  color: #fff;
+  padding: 20px;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px; /* Added subtle border radius */
+  background-color: #1f1f1f; /* Slightly lighter background for the app container */
+  animation: enter-app 0.3s ease-in-out forwards;
+}
+
+@keyframes enter-app {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  animation: text-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes text-pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex; /* Maintains button positioning */
+  justify-content: space-between; /* Spacing between text boxes and buttons */
+}
+.form-control {
+  background-color: #333; /* Darkened input field */
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  width: 100%; /* Fills available space */
+  border-radius: 5px; /* Consistent border radius */
+  animation: input-focus 0.3s ease-in-out;
+}
+
+@keyframes input-focus {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #4d90fe; /* Brief blue border on focus */
+  }
+}
+
+.form-control:focus {
+  outline: none; /* Removes default focus outline */
+}
+
+.btn-primary,
+.btn-delete {
+  background-color: #4d90fe; /* Consistent button color */
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  margin-left: 10px; /* Spacing between buttons */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px; /* Consistent border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-delete:hover {
+  background-color: #357ae8; /* Brighter button on hover */
+}
+
+.float-right {
+  float: right;
+}
+
+.btn-delete {
+  background-color: #c0392b; /* Red for delete button */
+  animation: button-wiggle 0.3s ease-in-out infinite alternate; /* Subtle button wiggle on hover */
+  margin-left: auto; /* Move the button to the right */
+  align-self: flex-end; /* Align the button to the end of the flex container */
+}
+
+
+@keyframes button-wiggle {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+.list-group-item {
+  background-color: #333; /* Darkened list item */
+  border-color: transparent; /* Removes default border */
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 5px; /* Consistent border radius */
+  transition: background-color 0.3s ease;
+  animation: list-enter 0.3s ease-in forwards;
+}
+
+@keyframes list-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-group-item:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+.list-group-item.completed {
+  text-decoration: line-through;
+  opacity: 0.7; /* Reduce opacity for completed tasks */
+}
